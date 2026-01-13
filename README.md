@@ -1,78 +1,50 @@
-# Ruby on Rails Test Task
+# Weather Forecast API
 
-A minimal Ruby on Rails application for the take-home test.
+A Ruby on Rails application for the take-home coding test. Fetches weather data from an external provider and returns forecast information.
 
-## Stack
+## Requirements / What's Implemented
 
-- **Ruby**: 3.4.8
-- **Rails**: 7.1.6
-- **Database**: SQLite3 (logically stateless - no data persistence required)
-- **Testing**: RSpec
+- [x] Rails application scaffolding (Sprint 0)
+- [x] RSpec test framework configured
+- [ ] Weather forecast endpoint (Sprint 1 - pending)
+- [ ] External provider integration (Sprint 1 - pending)
 
-## How to Run Locally (Windows 11 + Cursor)
+## Tech Stack
 
-### Prerequisites
+| Component | Version |
+|-----------|---------|
+| Ruby | 3.4.8 |
+| Rails | 7.1.x |
+| Database | SQLite (default) |
+| Testing | RSpec |
 
-1. **Ruby 3.4.x** - Install via [RubyInstaller for Windows](https://rubyinstaller.org/) (with DevKit)
-   - After installation, run `ridk install` and select option 3 (MSYS2 and MINGW development toolchain)
-2. **Bundler** - Run `gem install bundler` after Ruby is installed
-3. **Git** - For cloning the repository
+## Setup
 
-### Setup
+```bash
+git clone <repository-url>
+cd "Ruby on Rails Test Task"
+bundle install
+bin/rails db:prepare
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd "Ruby on Rails Test Task"
-   ```
-
-2. **Open terminal in Cursor**
-   - Press `Ctrl+`` (backtick) or go to **View → Terminal**
-   - Ensure you're in the project root directory
-
-3. **Install dependencies**
-   ```bash
-   bundle install
-   ```
-
-### Running the Server
+## Run
 
 ```bash
 bin/rails server
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser.
+Server starts at [http://localhost:3000](http://localhost:3000).
 
-### Running Tests
+## Test
 
 ```bash
-# Run all tests
 bundle exec rspec
-
-# Run with verbose output
-bundle exec rspec --format documentation
-
-# Run a specific file
-bundle exec rspec spec/requests/example_spec.rb
 ```
 
-## Project Structure
+## Useful Commands
 
+```bash
+bin/rails routes      # List all routes
+bin/rails console     # Interactive Rails console
+bin/rails db:migrate  # Run pending migrations
 ```
-├── app/
-│   ├── controllers/    # Request handlers
-│   ├── models/         # Business logic (currently empty)
-│   └── views/          # HTML templates
-├── config/             # Rails configuration
-├── spec/               # RSpec tests
-│   ├── rails_helper.rb
-│   └── spec_helper.rb
-├── Gemfile             # Ruby dependencies
-└── README.md           # This file
-```
-
-## Notes
-
-- Provider API calls will be stubbed in tests (using WebMock, to be added later)
-- No external API calls are made in the current state
-- Database is SQLite for simplicity; no migrations are required for this task

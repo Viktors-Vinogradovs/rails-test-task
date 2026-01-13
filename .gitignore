@@ -77,3 +77,6 @@ ehthumbs.db
 
 # Byebug history
 .byebug_history
+
+# Developer notes (personal/internal)
+DEV_NOTES.md
