@@ -10,7 +10,6 @@ TBD (per assignment spec)
 
 - [x] Rails application initialized
 - [x] RSpec testing framework configured
-- [ ] Feature implementation (pending)
 
 ## Tech Stack
 
