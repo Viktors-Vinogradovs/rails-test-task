@@ -1,13 +1,16 @@
-# Weather Forecast API
+# Ruby on Rails Take-Home Test
 
-A Ruby on Rails application for the take-home coding test. Fetches weather data from an external provider and returns forecast information.
+A Ruby on Rails application skeleton for the coding assignment.
 
-## Requirements / What's Implemented
+## Project Overview
 
-- [x] Rails application scaffolding (Sprint 0)
-- [x] RSpec test framework configured
-- [ ] Weather forecast endpoint (Sprint 1 - pending)
-- [ ] External provider integration (Sprint 1 - pending)
+TBD (per assignment spec)
+
+## Current State
+
+- [x] Rails application initialized
+- [x] RSpec testing framework configured
+- [ ] Feature implementation (pending)
 
 ## Tech Stack
 
@@ -15,7 +18,7 @@ A Ruby on Rails application for the take-home coding test. Fetches weather data 
 |-----------|---------|
 | Ruby | 3.4.8 |
 | Rails | 7.1.x |
-| Database | SQLite (default) |
+| Database | SQLite |
 | Testing | RSpec |
 
 ## Setup
@@ -33,7 +36,7 @@ bin/rails db:prepare
 bin/rails server
 ```
 
-Server starts at [http://localhost:3000](http://localhost:3000).
+Server starts at http://localhost:3000
 
 ## Test
 
