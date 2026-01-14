@@ -36,4 +36,18 @@ class ProviderClient
   rescue Faraday::Error => e
     raise ApiError, "Provider request failed: #{e.message}"
   end
+
+  # Authenticates a transaction with the Provider
+  # @param id [String] transaction ID
+  # @return [Boolean] true only if Provider returns 200 + status "success"
+  def auth_transaction(id)
+    response = @connection.put("/transactions/auth/#{id}")
+
+    return false unless response.success?
+    return false unless response.body.is_a?(Hash)
+
+    response.body["status"] == "success"
+  rescue Faraday::Error
+    false
+  end
 end

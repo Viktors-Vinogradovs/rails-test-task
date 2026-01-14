@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :transactions, only: [:create]
   end
 
+  # User-facing auth page
+  get "transactions/auth/:id", to: "transactions_auth#show", as: :transaction_auth
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
