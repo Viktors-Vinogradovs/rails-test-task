@@ -23,7 +23,7 @@ TBD (per assignment spec)
 ## Setup
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Viktors-Vinogradovs/rails-test-task.git
 cd "Ruby on Rails Test Task"
 bundle install
 bin/rails db:prepare
