@@ -121,7 +121,7 @@ APP_HOST=https://our-app.test
 
 ```bash
 git clone https://github.com/Viktors-Vinogradovs/rails-test-task.git
-cd "Ruby on Rails Test Task"
+cd "rails-test-task"
 bundle install
 bin/rails db:prepare
 ```
