@@ -194,18 +194,6 @@ curl -X POST http://localhost:3000/gateway/transactions \
 curl http://localhost:3000/transactions/auth/txn_abc123
 ```
 
-## Security Considerations
-
-- **Gateway authentication**: In production, authenticate/authorize Gateway requests using API keys, HMAC signatures, or mTLS
-- **Input validation**: Validate and sanitize all inputs (amounts, currency codes, transaction IDs)
-- **Schema validation**: Enforce strict JSON schemas for request payloads
-- **Idempotency**: Implement idempotency keys for retries to prevent duplicate transactions
-- **Rate limiting**: Add rate limiting to prevent DoS attacks and abuse
-- **Timeouts**: HTTP timeouts are configured (10s request, 5s connection) but should be tuned based on Provider SLA
-- **Error message leakage**: Ensure Provider errors don't expose internal system details to clients
-- **Audit logging**: Log all transaction init/auth attempts for compliance and debugging
-- **Open redirect protection**: Validate and whitelist `APP_HOST` to prevent open redirect vulnerabilities
-
 ## Tech Stack
 
 | Component | Version |
